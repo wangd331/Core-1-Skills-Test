@@ -1,0 +1,62 @@
+body {
+    background-color: #f6f1de;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    font-family: bookmania, serif;
+    margin: 100px;
+  }
+  
+  #once {
+    position: absolute;
+    top: 40vh;
+    font-family: bookmania, serif;
+    font-size: 150px;
+    line-height: 1;
+  }
+  
+  #insta {
+    position: absolute;
+    top: 15vh;
+    left: 150vw;
+  }
+  
+  #and {
+    position: absolute;
+    top: 15vh;
+    left: 180vw;
+    width: 250px;
+    font-size: 100px;
+    line-height: 1;
+  }
+  
+  #spacer {
+    position: absolute;
+    left: 210vw;
+    width: 100px;
+    height: 100px;
+  }
+  
+  @media screen and (max-width: 1100px) {
+    body {
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+    
+    #once {
+      font-size: 72px;
+    }
+    
+    #insta {
+      margin: 100px;
+      left: 0px;
+      top: 110vh;
+    }
+    
+    #and {
+      font-size: 72px;
+      top: 200vh;
+      left: 0px;
+      width: auto;
+      margin: 100px;
+    }
+  }
