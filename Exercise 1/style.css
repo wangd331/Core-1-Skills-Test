@@ -1,0 +1,22 @@
+body {
+    margin: 100px;
+    background-color: #000;
+}
+
+#solange {
+    position: absolute;
+    left: calc(50% - 280px);
+}
+
+#beyonce {
+    position: absolute;
+    left: calc(50% - 280px);
+    top: 515px;
+}
+
+#jayz {
+    position: absolute;
+    left: calc(50% - 280px);
+    top: 930px;
+}
+
