@@ -1,0 +1,205 @@
+#web2{
+    line-height: 0.7;
+    font-family: Helvetica, sans-serif;
+}
+
+#web3{
+    position: absolute;
+    top: 1000px;
+    left: 500px;
+}
+
+.circle{
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px black;
+    background-color: white;
+}
+
+#D{
+    position: relative;
+    top: 18px;
+    left: 30px;
+    width: 30px;
+    height: 50px;
+    background-color: white;
+    border: 8px solid black;
+    border-radius: 10px 20px 20px 10px;
+}
+
+#E{
+    position: relative;
+    top: 20px;
+    left: 30px;
+    height: 60px;
+    width: 8px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+#cap{
+    position: relative;
+    top: -16px;
+    width: 40px;
+    height: 8px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+#x{
+    position: relative;
+    top: 18px;
+    width: 30px;
+    height: 8px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+#base{
+    position: relative;
+    top: 52px;
+    width: 40px;
+    height: 8px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+#A{
+    position: relative;
+    top: 20px;
+    left: 35px;
+    height: 60px;
+    width: 8px;
+    background-color: black;
+    border-radius: 5px;
+    transform: rotate(20deg);
+}
+
+#A2{
+    position: relative;
+    top: -8px;
+    left: 17px;
+    height: 60px;
+    width: 8px;
+    background-color: black;
+    border-radius: 5px;
+    transform: rotate(-40deg);
+}
+
+#crossbar{
+    position: relative;
+    top: -30px;
+    width: 30px;
+    height: 8px;
+    background-color: black;
+    border-radius: 5px;
+    transform: rotate(-20deg);
+}
+
+#web4{
+    position: absolute;
+    top: 1530px;
+    left: 520px;
+    width: 500px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+#rectangle{
+    position: relative;
+    top: 20px;
+    width: 500px;
+    height: 10px;
+    background-color: white;
+}
+#rectangle2{
+    position: relative;
+    top: 30px;
+    width: 140px;
+    height: 10px;
+    background-color: white;
+}
+
+#d{
+    position: relative;
+    top: 6px;
+    left: 150px;
+    width: 60px;
+    height: 60px;
+    border: 20px solid black;
+    border-radius: 0px 50px 50px 0px;
+}
+
+#e{
+    position: relative;
+    top: -94px;
+    left: 260px;
+    height: 100px;
+    width: 20px;
+    background-color: black;
+}
+
+#e-cap{
+    position: relative;
+    top: -40px;
+    width: 90px;
+    height: 20px;
+    background-color: black;
+}
+
+#e-x{
+    position: relative;
+    top: 20px;
+    width: 80px;
+    height: 20px;
+    background-color: black;
+}
+
+#e-base{
+    position: relative;
+    top: 80px;
+    width: 90px;
+    height: 20px;
+    background-color: black;
+}
+
+#a{
+    position: relative;
+    top: -194px;
+    left: 380px;
+    height: 100px;
+    width: 20px;
+    background-color: black;
+    transform: skew(-25deg);
+}
+
+#a2{
+    position: relative;
+    left: 50px;
+    height: 100px;
+    width: 20px;
+    background-color: black;
+    transform: skew(42deg);
+}
+
+#bar{
+    position: relative;
+    top: -40px;
+    left: 15px;
+    width: 60px;
+    height: 20px;
+    background-color: black;
+    transform: skew(25deg);
+}
+
+#img6, #img7{
+    display: inline;
+}
+
+#web6, #web7{
+    line-height: 0.95;
+    letter-spacing: -2px;
+}
