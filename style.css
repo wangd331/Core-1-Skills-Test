@@ -1,0 +1,83 @@
+body{
+    background-color: #fcf9f1;
+    font-family: granville, serif;
+    font-weight: 400;
+    margin: 0rem;
+    animation: backgroundchange 10s linear infinite alternate;
+}
+
+h1 {
+    font-family: orpheuspro, serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 8rem;
+    line-height: 1;
+    margin: 0rem;
+}
+
+h2 {
+    font-family: orpheuspro, serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 0rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0rem;
+    text-align: right;
+}
+
+.projects{
+    display: inline-flex;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.projects:hover{
+    background-color: black;
+    color: #fcf9f1;
+}
+
+#header{
+    position: absolute;
+    left: calc(50vw - 465px);
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+#studio{
+    display: block;
+    position: absolute;
+    width: 930px;
+    left: calc(50vw - 465px);
+    top: 22rem;
+}
+
+#lab{
+    display: block;
+    position: absolute;
+    width: 930px;
+    left: calc(50vw - 465px);
+    top: 32rem;
+}
+
+@keyframes backgroundchange{
+    0% {background-color: #fcf9f1;}
+    50% {background-color: #e7d7be;}
+    100% {background-color: #ccd5ae;}
+  }
+
+  /* @media only screen and (max-width: 1000px){
+}
+
+  @media only screen and (max-width: 640px){
+}
+ */
