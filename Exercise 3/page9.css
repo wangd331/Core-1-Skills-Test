@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: eskapade, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0;
+}
+
+img{
+    position: absolute;
+    left: calc(50% - 150px);
+    top: calc(50% - 200px);
+    width: 300px;
+}
+
+#image{
+    position: absolute;
+    left: calc(50% - 150px);
+    top: calc(50% - 200px);
+    width: 300px;
+    height: 400px;
+}
+
+#image:hover, img:hover{
+    opacity: 0.5;
+    background-color: #FFE76E;
+}
+
+#text{
+    position: absolute;
+    width: 300px;
+    left: calc(50% - 150px);
+    top: 20vh;
+}

@@ -1,0 +1,54 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: eskapade, serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    margin: 5%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: line-through;
+    color: #FFE76E;
+}
+
+#text{
+    position: absolute;
+    font-size: 8rem;
+}
+
+#credits{
+    position: absolute;
+    top: 60vh;
+    right: 5%;
+    width: 80vw;
+    font-style: italic;
+    font-size: 2rem;
+    text-align: right;
+}
+
+@media only screen and (max-width: 1200px){
+    #text{
+        top: 20vh;
+        font-size: 4rem;
+    }
+    #credits{
+        top: 50vh;
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    #text{
+        font-size: 2rem;
+    }
+    #credits{
+        font-size: 1rem;
+    }
+}

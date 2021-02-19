@@ -1,0 +1,120 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: eskapade, serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: line-through;
+    color: #FFE76E;
+}
+
+img {
+    max-width: 25vw;
+}
+
+#title {
+    position: absolute;
+    top: 65vw;
+    left: calc(50% - 200px);
+    font-size: 4rem;
+    line-height: 1;
+}
+
+#text {
+    position: absolute;
+    top: 5vw;
+    left: 50px;
+    color: white;
+    font-style: italic;
+    font-size: 8rem;
+    line-height: 1;
+}
+
+#window1 {
+    position: absolute;
+    top: 20vw;
+    left: 24vw;
+}
+
+#window2{
+    position: absolute;
+    top: 20vw;
+    left: 50vw;
+}
+
+#window2:hover, img:hover{
+    background-color: #FFE76E;
+    opacity: 0.5;
+}
+
+#window3{
+    position: absolute;
+    top: 40vw;
+    left: 24vw;
+}
+
+#window4{
+    position: absolute;
+    top: 40vw;
+    left: 50vw;
+}
+
+@media only screen and (min-width: 900px){
+
+    #title{
+        top:55vw;
+    }
+    #window1{
+        left: 28vw;
+    }
+    #window3{
+        left: 28vw;
+        top: 37vw;
+    }
+    #window4{
+        top: 37vw;
+    }
+    img {
+        width: 20vw;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    #text{
+        top: 3vw;
+    }
+    #title{
+        top: 44vw;
+    }
+
+    #window1{
+        top: 10vw;
+    }
+    #window2{
+        top: 10vw;
+    }
+    #window3{
+        top: 27vw;
+    }
+    #window4{
+        top: 27vw;
+    }
+}
+@media only screen and (max-width: 600px){
+    #text{
+        font-size: 6rem;
+    }
+    #title{
+        left: calc(50% - 100px);
+        font-size: 2rem;
+    }
+}

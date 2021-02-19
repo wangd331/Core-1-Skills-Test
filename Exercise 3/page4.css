@@ -1,0 +1,58 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: eskapade, serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #FFE76E;
+}
+
+a:hover {
+    text-decoration: line-through;
+}
+
+video {
+    position: absolute;
+    top: 10vh;
+    left: calc(50% - 15vw);
+    width: 30vw;
+    height: auto;
+}
+
+#text{
+    position: absolute;
+    width: 500px;
+    left: calc(50% - 250px);
+    top: 40vw;
+    font-size: 2rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1080px){
+    video{
+        width: 50vw;
+        left: calc(50% - 25vw);
+    }
+
+    #text{
+        top: 75vh;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    video{
+        width: 100vw;
+        top: 0;
+        left: calc(50% - 50vw);
+    }
+    #text{
+        left: calc(50% - 200px);
+        width: 400px;
+        top: 70vh;
+    }
+}

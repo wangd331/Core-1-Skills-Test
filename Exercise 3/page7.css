@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: eskapade, serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #FFE76E;
+}
+
+a:hover {
+    text-decoration: line-through;
+}
+
+img{
+    position: absolute;
+    right: 0;
+    max-height: 100vh;
+}
+
+#text{
+    position: absolute;
+    line-height: 1;
+    font-size: 4rem;
+    width: 40vw;
+    right: 50vw;
+    top: 30vh;
+}
+
+@media only screen and (max-width: 1080px){
+    #text{
+        font-size: 2rem;
+        padding: 2rem;
+        width: 50vw;
+        right: 30vw;
+        background-color: black;
+    }
+}
