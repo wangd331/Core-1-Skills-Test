@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: 'Seymour One', sans-serif;
+  font-size: 100px;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #1982c4;
+}
+
+#live{
+  position: relative;
+  margin: 0;
+  width: 1200px;
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  color: transparent;
+  animation-name: orange;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+#laugh{
+  display: none;
+}
+
+#love{
+  display: none;
+}
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    top: -10vh;
+    left: 2vw;
+    margin-top: 10px;
+    animation-name: moveRight;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+  
+  #heart::before, #heart::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 52px;
+    height: 80px;
+    border-radius: 50px 50px 0 0;
+    background: #FF924C;
+  }
+  
+  #heart::before {
+    left: 50px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  
+  #heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+
+  @keyframes moveRight{
+    0% {left: -15vw;}
+    100% {left: 85vw;}
+  }
+
+  @keyframes moveDown{
+    0% {top: -10vh;}
+    100% {top: 70vh;}
+  }
+
+  @keyframes moveLeft{
+    0% {left: 85vw;}
+    100% {left: -50vw;}
+  }
+
+  @keyframes orange{
+    0% {color: transparent;}
+    100% {color: #FF924C;}
+  }
+
+  @keyframes green{
+    0% {color: transparent;}
+    100% {color: #8ac926;}
+  }
+
+  @keyframes red{
+    0% {color: transparent;}
+    100% {color: #ff595e;}
+  }
+
+  @media screen and (max-width: 1024px){
+    body{
+      background-color: #ffca3a;
+    }
+    #heart::before, #heart::after{
+      background-color: #8ac926;
+    }
+
+    #laugh{
+      display: block;
+      color: #8ac926;
+      position: relative;
+      margin: 0;
+      width: 1200px;
+      left: 50vw;
+      top: 50vh;
+      transform: translate(-50%, -50%);
+      color: transparent;
+      animation-name: green;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+    #live{
+      display: none;
+    }
+    #love{
+      display: none;
+    }
+    #heart{
+      left: 85vw;
+      animation-name: moveDown;
+      animation-duration: 3s;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+    }
+  }
+  @media screen and (max-width: 768px){
+    body{
+      background-color: #6a4c93;
+      color: #ff595e;
+    }
+    #heart::before, #heart::after{
+      background-color: #ff595e;
+    }
+    #love{
+      display: block;
+      position: relative;
+      margin: 0;
+      width: 1200px;
+      left: 50vw;
+      top: 50vh;
+      transform: translate(-50%, -50%);
+      color: transparent;
+      animation-name: red;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+    #live{
+      display: none;
+    }
+    #laugh{
+      display: none;
+    }
+    #heart{
+      left: 85vw;
+      top: 70vh;
+      animation-name: moveLeft;
+      animation-duration: 3s;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+    }
+  }

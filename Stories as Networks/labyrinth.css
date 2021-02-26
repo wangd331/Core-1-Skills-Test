@@ -1,0 +1,37 @@
+body{
+    font-family: plantin, georgia, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    color:#969695;
+    background-color: #121212;
+}
+
+a {
+    color: #FBFBF9;
+    text-decoration: none;
+    /* font-style: italic; */
+}
+
+a:active{
+    color: #969695;
+}
+
+a:hover{
+    text-decoration: line-through;
+}
+
+#header{
+    margin-bottom: 1rem;
+}
+
+#container{
+    position: relative;
+    width: 330px;
+    left: calc(50% - 160px);
+    top: calc(50% - 100px);
+    margin: 0;
+}

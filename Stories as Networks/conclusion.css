@@ -1,0 +1,112 @@
+body{
+    font-family: plantin, georgia, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    margin: 0;
+    width: 100vw;
+    height: 180vh;
+    color:#121212;
+    background-color: #121212;
+}
+
+a {
+    color: #121212;
+    text-decoration: none;
+    font-style: italic;
+    animation-name: titleFade;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 22s;
+}
+
+a:active{
+    color: #283618;
+}
+
+a:hover{
+    text-decoration: line-through;
+}
+
+.text{
+    margin-bottom: 2rem;
+    animation-name: textFade;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.text:nth-child(2){
+    animation-delay: 2s;
+}
+.text:nth-child(3){
+    animation-delay: 4s;
+}
+.text:nth-child(4){
+    animation-delay: 6s;
+}
+.text:nth-child(5){
+    animation-delay: 8s;
+}
+.text:nth-child(6){
+    animation-delay: 10s;
+}
+.text:nth-child(7){
+    animation-delay: 12s;
+}
+.text:nth-child(8){
+    animation-delay: 14s;
+}
+.text:nth-child(9){
+    animation-delay: 16s;
+}
+.text:nth-child(10){
+    animation-delay: 18s;
+}
+
+#title{
+    margin-bottom: 2rem;
+    animation-name: titleFade;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 20s;
+}
+
+#container{
+    position: relative;
+    left: 50%;
+    top: 100px;
+    transform: translate(-50%, 0%);
+    margin: 0;
+    width: 600px;
+}
+
+@keyframes textFade{
+    from {color: #121212;}
+    to {color: #FBFBF9;}
+}
+
+@keyframes titleFade{
+    from {color: #121212;}
+    to {color: #606C38;}
+}
+
+@media only screen and (max-width: 1080px){
+    body{
+        height: 210vh;
+    }
+    #container{
+        width: 450px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    body{
+        height: 230vh;
+    }
+    #container{
+        width: 400px;
+    }
+}
