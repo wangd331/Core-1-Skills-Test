@@ -68,9 +68,9 @@ h1{
 
 @media only screen and (max-width: 480px){
     body{
-        height: 250vh;
+        height: 500vh;
     }
     #container{
-        width: 70vw;
+        width: 80vw;
     }
 }

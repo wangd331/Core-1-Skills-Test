@@ -114,9 +114,9 @@ a:nth-of-type(6):hover {
 
 @media only screen and (max-width: 480px){
     body{
-        height: 110vh;
+        height: 120vh;
     }
     #container{
-        width: 70vw;
+        width: 80vw;
     }
 }
