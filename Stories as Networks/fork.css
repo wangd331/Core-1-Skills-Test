@@ -9,13 +9,33 @@ body{
     color: #969695;
 }
 
+#nav{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    line-height: 2rem;
+}
+
+#mission{
+    cursor:pointer;
+    color: #606C38;
+    font-style: italic;
+}
+
+#escape{
+    cursor:pointer;
+    color: #D04F04;
+    font-style: italic;
+}
+
+#visit{
+    cursor:pointer;
+    color: #6B0504;
+    font-style: italic;
+}
+
 a {
     text-decoration: none;
     color: #969695;
-}
-
-a:hover{
-    text-decoration: line-through;
 }
 
 a:first-of-type:hover {
@@ -40,21 +60,6 @@ a:nth-of-type(5):hover {
 
 a:nth-of-type(6):hover {
     color: #D04F04;
-}
-
-a:nth-of-type(7) {
-    color: #606C38;
-    font-style: italic;
-}
-
-a:nth-of-type(8) {
-    color: #D04F04;
-    font-style: italic;
-}
-
-a:nth-of-type(9) {
-    color: #6B0504;
-    font-style: italic;
 }
 
 #container{

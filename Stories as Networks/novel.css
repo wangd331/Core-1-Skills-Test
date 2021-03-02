@@ -14,14 +14,12 @@ a {
     text-decoration: none;
     font-style: italic;
 }
-
-a:active{
-    color: #283618;
-}
-
 a:hover{
-    text-decoration: line-through;
+    color: #BCB99B;
 }
+/* a:active{
+    color: #283618;
+} */
 
 #card{
     position: relative;

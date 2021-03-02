@@ -13,15 +13,10 @@ body{
 a {
     color: #FBFBF9;
     text-decoration: none;
-    /* font-style: italic; */
-}
-
-a:active{
-    color: #969695;
 }
 
 a:hover{
-    text-decoration: line-through;
+    color: #969695;
 }
 
 #header{

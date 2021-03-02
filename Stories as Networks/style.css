@@ -15,16 +15,14 @@ body{
 a {
     color: #FBFBF9;
     text-decoration: none;
-    /* font-style: italic; */
 }
-
-a:active{
-    color: #283618;
-}
-
 a:hover{
-    text-decoration: line-through;
+    color: #BCB99B;
 }
+
+/* a:active{
+    color: #283618;
+} */
 
 #container{
     position: relative;
