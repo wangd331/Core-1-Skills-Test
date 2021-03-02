@@ -5,7 +5,7 @@ body{
     font-size: 1.5rem;
     margin: 0;
     width: 100vw;
-    height: 650vh;
+    height: 660vh;
     color: #FBFBF9;
     background: linear-gradient(0deg, rgba(208,79,4,1) 50%, rgba(188,185,155,1) 100%);
 }
@@ -68,7 +68,7 @@ h1{
 
 @media only screen and (max-width: 480px){
     body{
-        height: 700vh;
+        height: 710vh;
     }
     #container{
         width: 80vw;
