@@ -65,3 +65,12 @@ h1{
         width: 400px;
     }
 }
+
+@media only screen and (max-width: 480px){
+    body{
+        height: 250vh;
+    }
+    #container{
+        width: 70vw;
+    }
+}

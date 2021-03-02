@@ -30,3 +30,11 @@ a:hover{
     top: calc(50% - 100px);
     margin: 0;
 }
+
+@media only screen and (max-width: 480px){
+    body{
+        height: 100vh;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+}

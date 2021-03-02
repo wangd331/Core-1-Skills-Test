@@ -64,3 +64,15 @@ h1{
         width: 400px;
     }
 }
+
+@media only screen and (max-width: 480px){
+    body{
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    #container{
+        top: 100px;
+        width: 70vw;
+    }
+}

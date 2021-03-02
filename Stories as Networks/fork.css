@@ -111,3 +111,12 @@ a:nth-of-type(6):hover {
         color: #D04F04;
     }
 }
+
+@media only screen and (max-width: 480px){
+    body{
+        height: 110vh;
+    }
+    #container{
+        width: 70vw;
+    }
+}
