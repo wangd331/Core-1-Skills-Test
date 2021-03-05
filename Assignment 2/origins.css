@@ -1,0 +1,166 @@
+body {
+    background-color: #FBF7F3;
+    color: #121212;
+    font-family: supria-sans, sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: #FBF7F3;
+    text-decoration: none;
+}
+
+h1{
+    font-family: cowboyslang, sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2rem;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    width: 100vw;
+    height: 100px;
+    background-color: #FFAFC5;
+    color: #FBF7F3;
+    z-index: 97;
+}
+
+.title{
+    font-family: cowboyslang, sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    margin-right: 1rem;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.menu{
+    position: relative;
+    right: 5%;
+    margin: 0;
+    margin-top: 0.2rem;
+    padding: 0;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.navigation{
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 98;
+    display: none;
+}
+
+.navigation li{
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.header.open .navigation {
+    display: flex;
+    position: absolute;
+    background-color:rgba(255, 175, 197, 0.95);
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 100px;
+}
+
+.text{
+    margin: 5%;
+    padding: 10%;
+    background-color: #E3C8B3;
+    color: #995937;
+}
+
+.section2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0% 10% 0% 10%;
+}
+
+.section3{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+}
+
+.section3 img{
+    display: none;
+}
+
+.section4{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+}
+
+.section4 img{
+    height: 500px;
+    width: auto;
+}
+
+@media only screen and (min-width: 800px) {
+    body{
+        font-size: 2rem;
+    }
+    h1{
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+    .title{
+        font-size: 4rem;
+    }
+    .navigation{
+        max-width: 40%;
+    }
+    .text{
+        padding: 5% 15% 5% 15%;
+    }
+    .section2{
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+    .section3{
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+    .section3 img{
+        max-height: 500px;
+        width: auto;
+        margin: 0;
+        display: block;
+    }
+    .section4{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
