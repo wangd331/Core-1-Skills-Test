@@ -1,9 +1,7 @@
 body{
-    background-color: #fcf9f1;
     font-family: granville, serif;
     font-weight: 400;
     margin: 0rem;
-    animation: backgroundchange 10s linear infinite alternate;
 }
 
 h1 {
@@ -32,7 +30,6 @@ a {
 p {
     font-size: 1rem;
     margin: 0rem;
-    text-align: right;
 }
 
 .projects{
@@ -49,36 +46,61 @@ p {
 
 #header{
     position: absolute;
-    left: calc(50vw - 465px);
+    width: 80vw;
+    left: 50%;
+    transform: translate(-50%, 0%);
     margin-top: 5rem;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 #studio{
     display: block;
-    position: absolute;
-    width: 930px;
-    left: calc(50vw - 465px);
-    top: 22rem;
+    position: relative;
+    width: 60vw;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    top: 50vh;
 }
 
 #lab{
     display: block;
-    position: absolute;
-    width: 930px;
-    left: calc(50vw - 465px);
-    top: 32rem;
+    position: relative;
+    width: 60vw;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    top: 55vh;
 }
 
-@keyframes backgroundchange{
-    0% {background-color: #fcf9f1;}
-    50% {background-color: #e7d7be;}
-    100% {background-color: #ccd5ae;}
+  @media only screen and (max-width: 1200px) {
+      h1{
+          font-size: 6rem;
+      }
+      #header{
+        left: 50%;
+        transform: translate(-50%, 0%);
+      }
+      #studio{
+        width: 75vw;
+    }
+    #lab{
+      width: 75vw;
+    }
   }
 
-  /* @media only screen and (max-width: 1000px){
+  @media only screen and (max-width: 600px) {
+    h1{
+        font-size: 4rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    #studio{
+        width: 80vw;
+        top: 45vh;
+    }
+    #lab{
+      width: 80vw;
+      top: 50vh;
+    }
 }
-
-  @media only screen and (max-width: 640px){
-}
- */
