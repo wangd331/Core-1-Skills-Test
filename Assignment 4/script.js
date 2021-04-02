@@ -1,6 +1,3 @@
-//make sure the script file is working
-console.log('stop crying');
-
 //load airtable library
 let Airtable = require("airtable");
 
