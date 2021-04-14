@@ -77,8 +77,6 @@ function showLocations() {
                 locationContainer.style.display = "block";
                 locationContainer.style.color = "#83060E";
                 coordinate.style.backgroundColor = "#83060E";
-                locationImage.style.color = "#83060E";
-                locationCaption.style.color = "#83060E";
                 // document.querySelector("#filters").style.color = "#83060E";
                 filterFood.style.backgroundColor = "#83060E";
                 filterInstitution.style.backgroundColor = "#fff";
@@ -96,8 +94,6 @@ function showLocations() {
                 locationContainer.style.display = "block";
                 locationContainer.style.color = "#D8A33F";
                 coordinate.style.backgroundColor = "#D8A33F";
-                locationImage.style.color = "#D8A33F";
-                locationCaption.style.color = "#D8A33F";
                 // document.querySelector("#filters").style.color = "#D8A33F";
                 filterInstitution.style.backgroundColor = "#D8A33F";
                 filterFood.style.backgroundColor = "#fff";
@@ -114,8 +110,6 @@ function showLocations() {
                 locationContainer.style.display = "block";
                 locationContainer.style.color = "#165D48";
                 coordinate.style.backgroundColor = "#165D48";
-                locationImage.style.color = "#165D48";
-                locationCaption.style.color = "#165D48";
                 // document.querySelector("#filters").style.color = "#165D48";
                 filterRecreation.style.backgroundColor = "#165D48";
                 filterInstitution.style.backgroundColor = "#fff";
@@ -132,8 +126,6 @@ function showLocations() {
                 locationContainer.style.display = "block";
                 locationContainer.style.color = "#213061";
                 coordinate.style.backgroundColor = "#213061";
-                locationImage.style.color = "#213061";
-                locationCaption.style.color = "#213061";
                 // document.querySelector("#filters").style.color = "#213061";
                 filterRegion.style.backgroundColor = "#213061";
                 filterInstitution.style.backgroundColor = "#fff";
@@ -149,8 +141,6 @@ function showLocations() {
           locationContainer.style.display = "block";
           locationContainer.style.color = "#000";
           coordinate.style.backgroundColor = "#000";
-          locationImage.style.color = "#000";
-          locationCaption.style.color = "#000";
           filterRegion.style.backgroundColor = "#fff";
           filterInstitution.style.backgroundColor = "#fff";
           filterFood.style.backgroundColor = "#fff";
