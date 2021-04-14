@@ -84,8 +84,8 @@ img {
 .food-filter, .institution-filter, .recreation-filter, .region-filter, .service-filter {
     position: relative;
     left: -2vw;
-    width: 50px;
     border: 5px solid;
+    padding-right: 50px;
 }
 
 .red{
