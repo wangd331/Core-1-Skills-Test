@@ -554,6 +554,7 @@ h1 {
 
 @media only screen and (max-width: 500px) {
     #filters{
+        top: 80vh;
         left: 0vw;
         width: 100vw;
     }
@@ -562,7 +563,7 @@ h1 {
         flex-basis: 50%;
     }
     #nav{
-        top: 74vh;
+        top: 68vh;
         left: -10px;
     }
     .reset{
