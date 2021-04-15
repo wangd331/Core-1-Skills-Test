@@ -572,6 +572,9 @@ img {
 }
 
 @media only screen and (max-width: 500px) {
+    #container{
+        top: -200px;
+    }
     #filters{
         top: 80vh;
         left: 0vw;
