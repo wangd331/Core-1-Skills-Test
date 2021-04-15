@@ -497,3 +497,76 @@ h1 {
     top: 19.2rem;
     left: 86rem;
 }
+
+@media only screen and (max-width: 1200px) {
+    #container{
+        position: relative;
+        top: -200px;
+    }
+    #filters{
+        height: 150px;
+        width: 80vw;
+        left: 25vw;
+        top: calc(100vh - 160px);
+        font-size: 2rem;
+        flex-wrap: wrap;
+    }
+    .red, .yellow, .green, .blue{
+        position: relative;
+        flex-basis: 50%;
+    }
+    #nav{
+        top: 65vh;
+    }
+    .reset{
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: -20vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #container{
+        top: -100px;
+    }
+    #filters{
+        left: 20vw;
+        height: 100px;
+        top: calc(100vh - 125px);
+        font-size: 1rem;
+        flex-wrap: wrap;
+    }
+    .red, .yellow, .green, .blue{
+        position: relative;
+        flex-basis: 50%;
+    }
+    #nav{
+        top: 75vh;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    .reset{
+        top: 40px;
+        left: -14vw;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #filters{
+        left: 0vw;
+        width: 100vw;
+    }
+    .red, .yellow, .green, .blue{
+        position: relative;
+        flex-basis: 50%;
+    }
+    #nav{
+        top: 74vh;
+        left: -10px;
+    }
+    .reset{
+        top: -30px;
+        left: 85vw;
+    }
+}
