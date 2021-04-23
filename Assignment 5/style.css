@@ -60,5 +60,17 @@ p {
     #recipe1, #recipe2, #recipe3{
         width: 500px;
     }
+}
 
+@media screen and (max-width: 600px){
+    body{
+        font-size: 2rem;
+    }
+    .container {
+        width: 300px;
+        top: calc(50vh - 110px);
+    }
+    #recipe1, #recipe2, #recipe3{
+        width: 300px;
+    }
 }
