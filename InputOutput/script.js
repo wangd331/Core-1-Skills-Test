@@ -1,5 +1,3 @@
-//base code for output
-
 let inputElement = document.getElementById("input");
 let output = document.querySelector("#output");
 
@@ -168,88 +166,7 @@ function throttle(func, limit) {
 		}
 	};
 }
-
-
-//IGNORE
-
-// //run word counter function
-// function countWords() {
-//     // Get the input text value
-//     var text = inputElement.value;
-//     // Initialize the word counter
-//     var wordCount = 0;
-//     // Loop through the text and count spaces in it 
-//     for (var i = 0; i < text.length; i++) {
-//         var currentCharacter = text[i];
-//         // Check if the character is a space
-//         if (currentCharacter == " ") {
-//             wordCount += 1;
-//         }
-//     }
-//     // Add 1 to make the count equal to the number of words (count of words = count of spaces + 1)
-//         wordCount += 1;
-//     //console log word count
-//     console.log("word count: " + wordCount);
-// }
-
-// // Detect when key is pressed in the text box
-// inputElement.addEventListener("keydown", function(event){
-  
-//   //Check if enter key is pressed
-//   if (event.key == "Enter"){
-    
-//     //console log the text
-//     console.log("user typed: " + inputElement.value);
-
-//     //run and console log word counter
-//     countWords();
-
-//     //console log starting letter
-//     console.log("starting letter: " + inputElement.value.charAt(0));
-
-//     //show "Did you say..."
-//     document.querySelector("#output-label").style.display = "block";
-
-//     //output
-//     output.innerText = '"' + inputElement.value + '"' + "?";
-
-//     // output random word
-//     output.style.display = "block";
-//     let letter = inputElement.value.charAt(0);
-
-//     // if ([" t"].includes(inputElement.value)){
-//     //     output.innerText = " " + tWord;
-//     // };
-
-//     // if (["p"].includes(letter)){
-//     //     output.innerText = pWord;
-//     // };
-
-//     // if ([" p"].includes(inputElement.value)){
-//     //     output.innerText = " " + pWord;
-//     // };
-
-
-//     //text scrambler from https://github.com/Recidvst/scrambling-letters
-//     Scrambler({
-//         target: '#output',
-//         random: [500, 1000],
-//         speed: 100,
-//       });
-
-//     //show reset button
-//     let reset = document.querySelector("#reset");
-//     reset.style.display = "block";
-
-//     // Reset the value inside the text box
-//     reset.addEventListener("click", function(){
-//         inputElement.value = "";
-//         reset.style.display = "none";
-//         output.style.display = "none";
-//         document.querySelector("#output-label").style.display = "none";
-//     });
-//   }
-// });
+ 
 
 
 
