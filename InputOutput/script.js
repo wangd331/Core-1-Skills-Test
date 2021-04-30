@@ -1,228 +1,246 @@
 //base code for output
 
-let inputElement = document.querySelector("#input");
+let inputElement = document.getElementById("input");
 let output = document.querySelector("#output");
 
 //random word generator
 //make arrays for each soft consonant/sound
+const newWordList = [
+    {
+        match: "t",
+        words: ['to', 'tag', 'table', 'talk', 'typography', 'twig', 'trace', 'truth', 'triangle', 'truck', 'temptation', 'tiger', 'trouble']
+    },
+    {
+        match: "p",
+        words: ['pop', 'premium', 'pyramid', 'paper', 'private', 'plastic', 'personality', 'pedestrian', 'pocket', 'pie', 'protect', 'paint']
+    },
+    {
+        match: "s",
+        words: ['skin', 'second', 'student', 'sound', 'scenario', 'soup', 'sour', 'symbol', 'shy', 'snack', 'so', 'salad']
+    },
+    {
+        match: "f",
+        words: ['failure', 'flex', 'fish', 'friend', 'firefighter', 'floor', 'fever', 'feminist', 'forbid', 'family', 'film', 'fast']
+    },
+    {
+        match: "h",
+        words: ['heavy', 'herb', 'hospital', 'hip', 'horse', 'highway', 'harmony', 'husband', 'haircut', 'hold', 'hello', 'help']
+    },
+    {
+        match: "k",
+        words: ['kidney', 'killer', 'knee', 'kitchen', 'king', 'kick', 'key', 'kaleidoscope', 'kettle', 'kindergarden', 'keep', 'kale']
+    },
+    {
+        match: "c",
+        words: ['camera', 'cat', 'committee', 'cup', 'cow', 'crime', 'cash', 'climb', 'capitalist', 'cake', 'coffee','crystal']
+    },
+    {
+        match: "ch",
+        words: ['check', 'chiropracter', 'challenge', 'chicken', 'chemistry', 'chocolate', 'cheese', 'chives', 'chip', 'chilly']
+    },
+    {
+        match: "sh",
+        words: ['sharp', 'shellfish', 'shirt', 'share', 'shop', 'shame', 'short', 'sheep', 'shocked', 'shoe']
+    },
+    {
+        match: "th",
+        words: ['the', 'that', 'therapy', 'thought', 'thin', 'thick', 'thirteen', 'thumb', 'things', 'theory']
+    },
+];
 
-let t = ['to', 'tag', 'table', 'talk', 'typography', 'twig', 'trace', 'truth', 'triangle', 'truck', 'temptation', 'tiger', 'trouble'];
+const cache = {
+    lastMatchedLetter: null,
+    shownWords: []
+};
 
-let p = ['pop', 'premium', 'pyramid', 'paper', 'private', 'plastic', 'personality', 'pedestrian', 'pocket', 'pie', 'protect', 'paint'];
+//listen for input, convert textbox value to array of words
+inputElement.addEventListener("input", (event) => {
+    //divide string at spaces and places in an array
+    const splitInput = event.target.value.split(" ");
+    const lastWord = splitInput[splitInput.length - 1];
 
-let s = ['skin', 'second', 'student', 'sound', 'scenario', 'soup', 'sour', 'symbol', 'shy', 'snack', 'so', 'salad'];
+    	//ignore - for enhancing website performance
+	throttle(
+		(() => {
+			const similarWord = findSimilarWord(lastWord, newWordList);
 
-let f = ['failure', 'flex', 'fish', 'friend', 'firefighter', 'floor', 'fever', 'feminist', 'forbid', 'family', 'film', 'fast'];
+			//if the new word begins with the same letter as the previous one, replace the last item in the cache. otherwise, push it to the cache
+			if (
+				cache.shownWords.length > 0 &&
+				cache.shownWords[cache.shownWords.length - 1]?.charAt(0) ===
+					similarWord?.charAt(0)
+			) {
+				cache.shownWords[cache.shownWords.length - 1] = similarWord;
+			} else if (typeof similarWord === "string") {
+				cache.shownWords.push(similarWord);
+			}
 
-let h = ['heavy', 'herb', 'hospital', 'hip', 'horse', 'highway', 'harmony', 'husband', 'haircut', 'hold', 'hello', 'help'];
+			showWord(cache.shownWords.filter((word) => word.length > 0).join(" "));
+		})(),
+		150
+	);
+});
 
-let k = ['kidney', 'killer', 'knee', 'kitchen', 'king', 'kick', 'key', 'kaleidoscope', 'kettle', 'kindergarden', 'keep', 'kale'];
+document.getElementById("form").addEventListener("submit", (event) => {
+    event.preventDefault();
+});
 
-let c = ['camera', 'cat', 'committee', 'cup', 'cow', 'crime', 'cash', 'climb', 'capitalist', 'cake', 'coffee','crystal'];
+function findSimilarWord(originalWord, dictionary) {
+    if (originalWord.length === 0 || typeof originalWord !== "string") {
+        //return a blank string if last input is blank (spacebar)
+        cache.lastMatchedLetter = null;
+        return "";
+    }
 
-let ch = ['check', 'chiropracter', 'challenge', 'chicken', 'chemistry', 'chocolate', 'cheese', 'chives', 'chip', 'chilly'];
-
-let sh = ['sharp', 'shellfish', 'shirt', 'share', 'shop', 'shame', 'short', 'sheep', 'shocked', 'shoe'];
-
-let th = ['the', 'that', 'therapy', 'thought', 'thin', 'thick', 'thirteen', 'thumb', 'things', 'theory'];
-
-//generate random word
-
-let tWord = t[Math.floor(Math.random() * t.length)];
-console.log("random word starting with T: " + tWord);
-
-let pWord = p[Math.floor(Math.random() * p.length)];
-console.log("random word starting with P: " + pWord);
-
-let sWord = s[Math.floor(Math.random() * s.length)];
-console.log("random word starting with S: " + sWord);
-
-let fWord = f[Math.floor(Math.random() * f.length)];
-console.log("random word starting with F: " + fWord);
-
-let hWord = h[Math.floor(Math.random() * h.length)];
-console.log("random word starting with H: " + hWord);
-
-let kWord = k[Math.floor(Math.random() * k.length)];
-console.log("random word starting with K: " + kWord);
-
-let cWord = c[Math.floor(Math.random() * c.length)];
-console.log("random word starting with C: " + cWord);
-
-let chWord = ch[Math.floor(Math.random() * ch.length)];
-console.log("random word starting with Ch: " + chWord);
-
-let shWord = sh[Math.floor(Math.random() * sh.length)];
-console.log("random word starting with Sh: " + shWord);
-
-let thWord = th[Math.floor(Math.random() * th.length)];
-console.log("random word starting with Th: " + thWord);
-
-//run word counter function
-function countWords() {
-    // Get the input text value
-    var text = inputElement.value;
-    // Initialize the word counter
-    var wordCount = 0;
-    // Loop through the text and count spaces in it 
-    for (var i = 0; i < text.length; i++) {
-        var currentCharacter = text[i];
-        // Check if the character is a space
-        if (currentCharacter == " ") {
-            wordCount += 1;
+    for (let i = 0; i < dictionary.length; i++) {
+        // create an array from the letters of the word, loop through starting from the beginning of the word, until it finds a match
+        for (
+            let j = 1, letters = originalWord.split("").slice(0, j);
+            j <= originalWord.length;
+            j++, letters = originalWord.split("").slice(0, j)
+        ) {
+            if (
+                letters.join("").toLowerCase() === dictionary[i].match &&
+                !cache.lastMatchedLetter?.includes(dictionary[i].match)
+            ) {
+                //saves the matched letter - now it will only output a randomized word after you press space to type a new word or delete the last word
+                cache.lastMatchedLetter = dictionary[i].match;
+                return getRandomItem(dictionary[i].words);
+            }
         }
     }
-    // Add 1 to make the count equal to the number of words (count of words = count of spaces + 1)
-        wordCount += 1;
-    //console log word count
-    console.log("word count: " + wordCount);
+    //return null if there is a character inputted, but no match. This will make the function showWord() do nothing rather than clearing the suggestion
+    return null;
 }
 
-// Detect when key is pressed in the text box
-inputElement.addEventListener("keydown", function(event){
-  
-  //Check if enter key is pressed
-  if (event.key == " "){
-    
-    //console log the text
-    console.log("user typed: " + inputElement.value);
+//generate random word from array
+function getRandomItem(array) {
+    return array[Math.floor(Math.random() * array.length)];
+}
 
-    //run and console log word counter
-    countWords();
-
-    //console log starting letter
-    console.log("starting letter: " + inputElement.value.charAt(0));
-
-    //show "Did you say..."
-    document.querySelector("#output-label").style.display = "block";
-
-    //output
-    output.innerText = '"' + inputElement.value + '"' + "?";
-
-    // output random word
-    output.style.display = "block";
-    let letter = inputElement.value.charAt(0);
-
-    if (["t"].includes(letter)){
-        output.innerText = tWord;
-    };
-
-    if ([" t"].includes(inputElement.value)){
-        output.innerText = " " + tWord;
-    };
-
-    if (["p"].includes(letter)){
-        output.innerText = pWord;
-    };
-
-    if ([" p"].includes(inputElement.value)){
-        output.innerText = " " + pWord;
-    };
-
-    if (["s"].includes(letter)){
-        output.innerText = sWord;
-    };
-
-    if ([" s"].includes(inputElement.value)){
-        output.innerText = " " + sWord;
-    };
-
-    if (["f"].includes(letter)){
-        output.innerText = fWord;
-    };
-
-    if ([" f"].includes(inputElement.value)){
-        output.innerText = " " + fWord;
-    };
-
-    if (["h"].includes(letter)){
-        output.innerText = hWord;
-    };
-
-    if ([" h"].includes(inputElement.value)){
-        output.innerText = " " + hWord;
-    };
-
-    if (["k"].includes(letter)){
-        output.innerText = kWord;
-    };
-
-    if ([" h"].includes(inputElement.value)){
-        output.innerText = " " + hWord;
-    };
-
-    if (["c"].includes(letter)){
-        output.innerText = cWord;
-    };
-
-    if ([" c"].includes(inputElement.value)){
-        output.innerText = " " + cWord;
-    };
-
-    if ([" th"].includes(inputElement.value)){
-        output.innerText = thWord;
-    };
-
-    if ([" ch"].includes(inputElement.value)){
-        output.innerText = chWord;
-    };
-
-    if ([" sh"].includes(inputElement.value)){
-        output.innerText = shWord;
-    };
-
+//output randomized word
+function showWord(word) {
+    if (typeof word !== "string") return;
+    document.getElementById("newPhrase").textContent = word;
+    output.removeAttribute("hidden");
+    //show nothing if there is nothing in the text input
+    if (word.length === 0) {
+        output.setAttribute("hidden", "");
+    }
     //text scrambler from https://github.com/Recidvst/scrambling-letters
     Scrambler({
-        target: '#output',
+        target: '#newPhrase',
         random: [500, 1000],
         speed: 100,
       });
+}
 
-    //show reset button
-    let reset = document.querySelector("#reset");
-    reset.style.display = "block";
+function showReset() {
+    document.getElementById("reset").removeAttribute("hidden");
+}
 
-    // Reset the value inside the text box
-    reset.addEventListener("click", function(){
-        inputElement.value = "";
-        reset.style.display = "none";
-        output.style.display = "none";
-        document.querySelector("#output-label").style.display = "none";
-    });
-  }
-});
+function throttle(func, limit) {
+	let lastFunc;
+	let lastRan;
+	return function throttledFunction(...args) {
+		const context = this;
+		function run() {
+			func.apply(context, args);
+			lastRan = Date.now();
+		}
+		if (!lastRan) {
+			if ("requestAnimationFrame" in window) {
+				requestAnimationFrame(run);
+			} else {
+				run();
+			}
+		} else {
+			clearTimeout(lastFunc);
+			lastFunc = setTimeout(() => {
+				if (Date.now() - lastRan >= limit) {
+					if ("requestAnimationFrame" in window) {
+						requestAnimationFrame(run);
+					} else {
+						run();
+					}
+				}
+			}, limit - (Date.now() - lastRan));
+		}
+	};
+}
 
-// // Detect button click, run the same function
-// let submit = document.querySelector("#submit");
-// submit.addEventListener("click", function(event){
+
+//IGNORE
+
+// //run word counter function
+// function countWords() {
+//     // Get the input text value
+//     var text = inputElement.value;
+//     // Initialize the word counter
+//     var wordCount = 0;
+//     // Loop through the text and count spaces in it 
+//     for (var i = 0; i < text.length; i++) {
+//         var currentCharacter = text[i];
+//         // Check if the character is a space
+//         if (currentCharacter == " ") {
+//             wordCount += 1;
+//         }
+//     }
+//     // Add 1 to make the count equal to the number of words (count of words = count of spaces + 1)
+//         wordCount += 1;
+//     //console log word count
+//     console.log("word count: " + wordCount);
+// }
+
+// // Detect when key is pressed in the text box
+// inputElement.addEventListener("keydown", function(event){
   
-//     // Let's show the text on the page!
+//   //Check if enter key is pressed
+//   if (event.key == "Enter"){
+    
+//     //console log the text
 //     console.log("user typed: " + inputElement.value);
 
-//     //run word counter
+//     //run and console log word counter
 //     countWords();
 
 //     //console log starting letter
 //     console.log("starting letter: " + inputElement.value.charAt(0));
-  
+
 //     //show "Did you say..."
 //     document.querySelector("#output-label").style.display = "block";
-      
-//     // Set what we typed (plus "You typed: ") to the inside of the result paragraph
-//     output.style.display = "block";
+
+//     //output
 //     output.innerText = '"' + inputElement.value + '"' + "?";
+
+//     // output random word
+//     output.style.display = "block";
+//     let letter = inputElement.value.charAt(0);
+
+//     // if ([" t"].includes(inputElement.value)){
+//     //     output.innerText = " " + tWord;
+//     // };
+
+//     // if (["p"].includes(letter)){
+//     //     output.innerText = pWord;
+//     // };
+
+//     // if ([" p"].includes(inputElement.value)){
+//     //     output.innerText = " " + pWord;
+//     // };
+
 
 //     //text scrambler from https://github.com/Recidvst/scrambling-letters
 //     Scrambler({
 //         target: '#output',
 //         random: [500, 1000],
 //         speed: 100,
-//     });
-  
+//       });
+
 //     //show reset button
 //     let reset = document.querySelector("#reset");
 //     reset.style.display = "block";
-  
+
 //     // Reset the value inside the text box
 //     reset.addEventListener("click", function(){
 //         inputElement.value = "";
@@ -230,8 +248,8 @@ inputElement.addEventListener("keydown", function(event){
 //         output.style.display = "none";
 //         document.querySelector("#output-label").style.display = "none";
 //     });
+//   }
 // });
-
 
 
 

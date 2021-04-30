@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #F5855B;
+}
+
+.container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 60vw;
+    left: 20vw;
+    margin-top: 100px;
+}
+
+#form {
+    margin-bottom: 100px;
+}
+
+label {
+    display: block;
+    font-family: fatfrank, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+input[type="text"] {
+    appearance: none;
+    border: none;
+    background-color: #F5855B;
+    color: rgba(255, 255, 255, 0.75);
+    width: 58vw;
+    padding: 1rem;
+    font-family: canada-type-gibson, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+input[type="text"]:focus {
+    background-color: #F8A484;
+    color: #fff;
+    border: none;
+}
+
+::placeholder {
+    position: relative;
+    left: -1rem;
+    padding: 1rem;
+    background-color: #F8A484;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+h1 {
+    margin: 0rem;
+    font-family: fatfrank, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    color: #fff;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+}
+
+#newPhrase {
+    display: inline;
+    font-family: fatfrank, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    color: #FFD972;
+}
+
+#output {
+    font-family: fatfrank, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    color: #FFD972;
+    margin-bottom: 100px;
+}
+
+#reset {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-family: fatfrank, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    text-align: left;
+    text-decoration: underline;
+}
+
+#correct, #incorrect {
+    border: none;
+    border-radius: 50px;
+    background-color: #F8A484;
+    color: #fff;
+    font-family: canada-type-gibson, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    padding: 0.5rem 2rem;
+    margin-top: 20px;
+}

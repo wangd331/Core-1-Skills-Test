@@ -5,17 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Input/Output MVP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/hxz7tor.css">
     <script src="scrambling-letters-master/dist/scrambler.umd.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <h1 id="label">Enter your first message:</h1>
-        <input type="text" id="input" placeholder="Whisper something...">
+        <form id="form">
+            <label for="input">Whisper something...</label>
+            <input type="text" id="input" placeholder="Type a message" maxlength="80">
+        </form>
         <!-- <button type="button" id="submit">Pass it on!</button> -->
-        <h1 id="output-label" style="display:none;">Did you say...</h1>
-        <p id="output"></p>
-        <button type="button" id="reset" style="display:none;">Play Again!</button>
+        <section id="output" hidden>
+            <h1 id="output-label">Did you say...</h1>
+            “<p id="newPhrase"></p>”?<br>
+            <button type="button" id="correct" onclick="showReset()">Yes, you guessed it!</button>
+            <button type="button" id="incorrect">No, try again!</button>
+        </section>
+        <button type="button" id="reset" onclick="location.reload()" hidden>Play Again!</button>
     </div>
 </body>
 </html>
