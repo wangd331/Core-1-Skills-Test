@@ -2,8 +2,80 @@ let inputElement = document.getElementById("input");
 let output = document.querySelector("#output");
 
 //random word generator
-//make arrays for each soft consonant/sound
+//make arrays for each letter/sound
 const newWordList = [
+    {
+        match: "a",
+        words: ['arrogant', 'agency', 'anniversary', 'abnormal', 'apathy', 'agriculture', 'ambiguous', 'average', 'architecture', 'artificial']
+    },
+    {
+        match: "b",
+        words: ['bench', 'bark', 'bed', 'bubble', 'blonde', 'boot', 'bronze', 'building', 'biscuit', 'blackmail']
+    },
+    {
+        match: "d",
+        words: ['dollar', 'door', 'disagree', 'disappointment', 'driver', 'depression', 'diagram', 'day', 'dragon', 'divorce']
+    },
+    {
+        match: "e",
+        words: ['elbow', 'effective', 'echo', 'emphasis', 'explode', 'essay', 'eagle', 'endorse', 'energy', 'economics']
+    },
+    {
+        match: "g",
+        words: ['gutter', 'gossip', 'galaxy', 'glove', 'governor', 'grass', 'glow', 'graduate', 'girl', 'gold']
+    },
+    {
+        match: "i",
+        words: ['indoor', 'investigation', 'integrity', 'image', 'infect', 'illness', 'indulge', 'infinite', 'ignore', 'injury']
+    },
+    {
+        match: "j",
+        words: ['job', 'jealous', 'jail', 'jewel', 'jump', 'jacket', 'justify', 'joy', 'jaw', 'joke']
+    },
+    {
+        match: "l",
+        words: ['landscape', 'lose', 'log', 'abnormal', 'lecture', 'laundry', 'liability', 'lazy', 'light', 'lawyer']
+    },
+    {
+        match: "m",
+        words: ['moon', 'meat', 'motif', 'meadow', 'mosquito', 'major', 'marriage', 'message', 'market', 'momentum']
+    },
+    {
+        match: "n",
+        words: ['nail', 'night', 'necklace', 'nature', 'needle', 'negative', 'nap', 'nose', 'neighborhood', 'nuclear']
+    },
+    {
+        match: "o",
+        words: ['occupation', 'onion', 'orchestra', 'orbit', 'overwhelmed', 'office', 'opinion', 'offend', 'old', 'original']
+    },
+    {
+        match: "q",
+        words: ['quiet', 'queen', 'quality', 'qualification', 'question', 'quit', 'quota', 'quote', 'quest', 'quarter']
+    },
+    {
+        match: "r",
+        words: ['radio', 'rice', 'resign', 'routine', 'rock', 'right', 'rhythm', 'rational', 'restaurant', 'rob']
+    },
+    {
+        match: "u",
+        words: ['useful', 'unit', 'understanding', 'umbrella', 'urgent', 'unpleasant', 'user', 'unique', 'unlikely', 'unfortunate']
+    },
+    {
+        match: "v",
+        words: ['volcano', 'volume', 'vegetarian', 'value', 'verdict', 'virus', 'valley', 'visual', 'voice', 'valid']
+    },
+    {
+        match: "w",
+        words: ['warm', 'willpower', 'weak', 'witch', 'welcome', 'winner', 'waiter', 'worm', 'witness', 'wine']
+    },
+    {
+        match: "y",
+        words: ['year', 'young', 'yes', 'yourself', 'yellow', 'yeast', 'yard', 'yarmulke', 'yolk', 'yikes']
+    },
+    {
+        match: "z",
+        words: ['zebra', 'zero', 'zone', 'zucchini', 'zap', 'zine', 'zoom', 'zesty', 'zoo', 'zigzag']
+    },
     {
         match: "t",
         words: ['to', 'tag', 'table', 'talk', 'typography', 'twig', 'trace', 'truth', 'triangle', 'truck', 'temptation', 'tiger', 'trouble']
@@ -136,6 +208,33 @@ function showWord(word) {
 function showReset() {
     document.getElementById("reset").removeAttribute("hidden");
 }
+
+// //if incorrect, run again
+// document.getElementById("incorrect").addEventListener("click", runAgain());
+// function runAgain (){
+//     const splitInput = document.getElementById("newPhrase").textContent.target.value.split(" ");
+//     const lastWord = splitInput[splitInput.length - 1];
+//     	//ignore - for enhancing website performance
+// 	throttle(
+// 		(() => {
+// 			const similarWord = findSimilarWord(lastWord, newWordList);
+
+// 			//if the new word begins with the same letter as the previous one, replace the last item in the cache. otherwise, push it to the cache
+// 			if (
+// 				cache.shownWords.length > 0 &&
+// 				cache.shownWords[cache.shownWords.length - 1]?.charAt(0) ===
+// 					similarWord?.charAt(0)
+// 			) {
+// 				cache.shownWords[cache.shownWords.length - 1] = similarWord;
+// 			} else if (typeof similarWord === "string") {
+// 				cache.shownWords.push(similarWord);
+// 			}
+
+// 			showWord(cache.shownWords.filter((word) => word.length > 0).join(" "));
+// 		})(),
+// 		150
+// 	);
+// }
 
 function throttle(func, limit) {
 	let lastFunc;

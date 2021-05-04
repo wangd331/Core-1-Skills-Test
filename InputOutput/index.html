@@ -12,6 +12,7 @@
 </head>
 <body>
     <div class="container">
+        <h1 style="font-size:5rem; text-align: center;">Let's Play Telephone!</h1><br><br><br>
         <form id="form">
             <label for="input">Whisper something...</label>
             <input type="text" id="input" placeholder="Type a message" maxlength="80">
@@ -22,6 +23,7 @@
             “<p id="newPhrase"></p>”?<br>
             <button type="button" id="correct" onclick="showReset()">Yes, you guessed it!</button>
             <button type="button" id="incorrect">No, try again!</button>
+            <p style="font-size:1rem; font-family:canada-type-gibson, sans-serif; color:#fff;">(Ignore the "no" button - I haven't written the code for this yet!)</p>
         </section>
         <button type="button" id="reset" onclick="location.reload()" hidden>Play Again!</button>
     </div>
