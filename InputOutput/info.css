@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #58BCFA;
+}
+
+#container {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 60vw;
+    left: 20vw;
+    margin-top: 15vh;
+}
+
+h1 {
+    margin: 0rem;
+    font-family: fatfrank, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    color: #fff;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-family: canada-type-gibson, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    color: #fff;
+}
+
+a {
+    font-family: fatfrank, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    color: #fff;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    border: none;
+    border-radius: 50px;
+    background-color: #8FCDF4;
+    color: #fff;
+    font-family: canada-type-gibson, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    padding: 0.5rem 2rem;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+    #container {
+        width: 80vw;
+        left: 10vw;
+        margin-top: 15vh;
+    }
+    h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+    button {
+        font-size: 1rem;
+    }
+}

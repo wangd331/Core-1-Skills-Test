@@ -1,7 +1,7 @@
 body {
     margin: 0;
     overflow-x: hidden;
-    background-color: #F5855B;
+    background-color: #AA75DC;
 }
 
 .container {
@@ -11,38 +11,34 @@ body {
     flex-wrap: wrap;
     width: 60vw;
     left: 20vw;
-    margin-top: 100px;
+    margin-top: 25vh;
+}
+
+#title {
+    width: 500px;
+    font-size: 5rem;
+    line-height: 5rem;
 }
 
 #form {
     margin-bottom: 100px;
 }
 
-label {
-    display: block;
-    font-family: fatfrank, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 3rem;
-    color: #fff;
-    margin-bottom: 1rem;
-}
-
 input[type="text"] {
     appearance: none;
     border: none;
-    background-color: #F5855B;
+    background-color: #AA75DC;
     color: rgba(255, 255, 255, 0.75);
     width: 58vw;
     padding: 1rem;
     font-family: canada-type-gibson, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 input[type="text"]:focus {
-    background-color: #F8A484;
+    background-color: #9757E4;
     color: #fff;
     border: none;
 }
@@ -51,7 +47,8 @@ input[type="text"]:focus {
     position: relative;
     left: -1rem;
     padding: 1rem;
-    background-color: #F8A484;
+    width: 100%;
+    background-color: #9757E4;
     color: rgba(255, 255, 255, 0.8);
 }
 
@@ -60,9 +57,9 @@ h1 {
     font-family: fatfrank, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #fff;
-    line-height: 3rem;
+    line-height: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -71,7 +68,7 @@ h1 {
     font-family: fatfrank, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 3rem;
+    font-size: 5rem;
     color: #FFD972;
 }
 
@@ -79,27 +76,15 @@ h1 {
     font-family: fatfrank, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 3rem;
+    font-size: 5rem;
     color: #FFD972;
     margin-bottom: 100px;
 }
 
-#reset {
-    border: none;
-    background-color: transparent;
-    color: #fff;
-    font-family: fatfrank, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 3rem;
-    text-align: left;
-    text-decoration: underline;
-}
-
-#correct, #incorrect {
+button {
     border: none;
     border-radius: 50px;
-    background-color: #F8A484;
+    background-color: #9757E4;
     color: #fff;
     font-family: canada-type-gibson, sans-serif;
     font-weight: 400;
@@ -107,4 +92,33 @@ h1 {
     font-size: 2rem;
     padding: 0.5rem 2rem;
     margin-top: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        width: 80vw;
+        left: 10vw;
+    }
+    #form, #output {
+        width: 80vw;
+        margin-bottom: 50px;
+    }
+    #output, #newPhrase {
+        font-size: 3rem;
+    }
+    #title {
+        width: 300px;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    input[type="text"] {
+        font-size: 2rem;
+        width: 72vw;
+    }
+    button {
+        font-size: 1rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
 }
