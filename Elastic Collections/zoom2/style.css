@@ -129,7 +129,7 @@ img {
     width: 300px;
     position: absolute;
 }
-.location-container:hover, .location-container:active{
+.coordinate:hover, .coordinate:active{
     cursor: pointer;
 }
 
