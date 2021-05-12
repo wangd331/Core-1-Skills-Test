@@ -201,7 +201,7 @@ function showLocations() {
         });
         
         //show/hide details toggle
-        locationContainer.addEventListener("click", function() {
+        coordinate.addEventListener("click", function() {
             if (detailContainer.style.display === "none") {
               detailContainer.style.display = "block";
             } else {
